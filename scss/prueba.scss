@@ -529,23 +529,24 @@ section#serviciosnosotros{
     margin: 50px;
     text-align: center;
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 
-    img{
-        width: 100%;
-        position: relative;
-    }
 
     button {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
         position: absolute;
         z-index: 1;
-        top: 50%;
-        left:25%;
         background-color: red;
         font-weight: bold;
         border: 0px;
         box-shadow: 4px 4px 8px 0 grey;
         padding: 20px;
-        margin: 20px;
 
         a{
             text-decoration: none;
@@ -557,6 +558,11 @@ section#serviciosnosotros{
             background-color: black;
             color: white;
         }
+    }
+
+    img{
+        width: 100%;
+        position: relative;
     }
 }
 
