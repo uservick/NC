@@ -1,0 +1,698 @@
+/* ESTILO GENERAL */
+* {box-sizing: border-box; }
+
+html, body{
+	font-family: 'Lato', sans-serif;
+	margin: 0;
+	/* padding:15px; */
+	min-height: 100vh;
+}
+
+
+$colors: (
+    gris: #808080,
+    negro:#000000,
+    blanco:#ffffff,
+    rojo:#cd1c05,
+    naranja:#cd5105,
+    verde: #25d366,
+);
+
+
+.container {
+    max-width: 1100px;
+	margin: auto;
+}
+
+a{
+	text-decoration: none;
+	color: hsl(0, 0%, 0%);
+}
+
+
+/*HEADER, MENU*/
+header{
+	background-color: black;
+	max-width: 100%;
+	position: sticky;
+	top: 0px;
+    z-index: 1;
+
+    .cabecera {
+        display: flex;
+        justify-content: space-between;
+        flex-grow: 1;
+        margin-left: 1rem;
+        flex-wrap: wrap;
+        padding: 0;
+        margin: 0;
+
+        .nota{
+	        width: 100%;
+            margin: 0;
+
+            p.nota {
+                background-color: #808080;
+                color: white;
+                padding: 5px;
+                text-align: center;
+                font-size: 1vw;
+            }
+        }
+
+        .menu {
+            width: 100%;
+            padding: 1vw;
+            display: flex;
+            align-content: center;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            margin: 0px;
+
+            .logonc{
+                width: auto;
+                height: 39px;
+            }
+
+            nav{
+                display: flex;
+                justify-content: space-around;
+                flex-grow: 1;
+                width: 50vw;
+
+                a{
+                    color:white;
+                    margin: 1px;
+                    background-color: black;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    text-decoration: none;
+
+                    a:hover{
+                        font-weight: bold;
+                        color:white;
+                        text-decoration: none;
+                    }
+                 }
+            }
+        }
+    }
+}
+
+
+.footer{
+	background-color: black;
+    padding: 20px;
+
+        p{
+            color: white;
+            text-align: center;
+            font-size: 12px;
+        }
+}
+
+
+
+/*BANNER PRINCIPAL PAG INDEX Y HANKOOK*/
+.main{
+    width: 100%;
+}
+.slide{
+    width: 100%;
+
+    img {
+     width: 100%;
+    }
+}
+
+
+/*seccion consultas yoko y hank*/
+section#consultas {
+    /* margin: 2rem; */
+    padding: 2rem;
+    background-color: black;
+	color: white;
+	text-align: center;
+    display: flex;
+
+    a {
+        color: white;
+    }
+
+    .ctauno {
+        font-size: 20px;
+    }
+
+    div#whatsappdata {
+        display: grid;
+        grid-gap: 50px;
+        grid-template-areas: "wppcap wppprov";
+        align-items: center;
+        justify-content: center;
+
+        #wppprov {
+            color: inherit;
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 30px;
+            padding: 5px 10px;
+
+            i {
+                color: #25d366;
+                font-size: 2rem;
+                margin-right: 0.5rem;
+            }
+
+            .texto {
+                display: block;
+            }
+
+            &:hover {
+                background-color: #25d366;
+                color: #fff;
+                i  {
+                    color: inherit;
+                }
+            }
+        }
+
+        #wppcap {
+            color: inherit;
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 30px;
+            padding: 5px 10px;
+
+            i {
+                color: #25d366;
+                font-size: 2rem;
+                margin-right: 0.5rem;
+            }
+
+            .texto {
+                display: block;
+            }
+
+            &:hover {
+                background-color: #25d366;
+                color: #fff;
+                i  {
+                    color: inherit;
+                }
+            }
+        }
+    }
+}
+
+
+/*seccion neumaticos*/
+section#neumaticosyokohama {
+    /*background-color: gray;*/
+    padding: 2rem;
+	color: white;
+    text-align: center;
+
+    h1{
+        text-align: center;
+        color: black;
+        background-color:rgba(255, 255, 255, 0.9);
+        border-bottom: black solid;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    p {
+        text-align: center;
+        color: black;
+        padding: 0 20px 20px 20px;
+        font-size: 1rem;
+        margin-bottom: 50px;
+    }
+}
+
+section#neumaticosHankook {
+    /*background-color: gray;*/
+    padding: 2rem;
+	color: white;
+    text-align: center;
+
+    h1{
+        text-align: center;
+        color: black;
+        background-color:rgba(255, 255, 255, 0.9);
+        border-bottom: black solid;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    p {
+        text-align: center;
+        color: black;
+        padding: 0 20px 20px 20px;
+        font-size: 1rem;
+        margin-bottom: 50px;
+    }
+}
+
+article.modeloneumatico {
+	background-color: white;
+	color: black;
+	display: inline-block;
+	width:340px ;
+	margin: 5px;
+	text-align: center;
+    box-shadow: 4px 4px 8px 0 grey;
+
+    .logoneumatico{
+        width: 150px;
+        padding: 10px;
+    }
+
+    h2 {
+	    font-size: 18px;
+    }
+
+    h3 {
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    img.neumatico {
+	    width: 80%;
+       &:hover{
+         width: 85%;
+       }
+    }
+
+}
+
+
+/*Seccion hankook y yoko*/
+
+.llamadoawebcont {
+    text-align: center;
+
+    img.llamadoaweb {
+        margin: 10px;
+        width: 80%;
+    }
+}
+
+.cta {
+    background-color: #CC1B05;
+	text-align: center;
+    padding: 30px;
+    color: white;
+    /* margin: 20px; */
+
+    h4 {
+        font-size: 1rem∫;
+    }
+
+    button{
+        background-color: white;
+        color: black;
+        padding: 1rem;
+        font-size: 20px;
+        border: 0;
+        border-radius: 12px;
+        padding: 8px 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: 350ms ease;
+        transform-origin: center center;
+        &:hover {
+            background-color: grey;
+            color: white;
+            animation-play-state: paused;
+        }
+    }
+}
+
+
+/*seccion promocional*/
+
+section#promocional {
+    box-shadow: 4px 4px 8px 0 grey;
+    margin: 5rem;
+	padding: 40px;
+	text-align: center;
+    /* display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr; */
+
+    h3.titulopromo {
+        text-align: center;
+        /* grid-column-start: 1;
+        grid-column-end: 3; */
+        margin-bottom: 40px;
+    }
+    .cuotas12 {
+        text-align: center;
+        margin-bottom: 30px;
+
+        h4 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+
+    .cuotas18 h4 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    img.logopromo {
+        width: 20vw;
+    }
+}
+
+
+/*seccion contacto yoko y hank*/
+
+div.contactoCTA {
+    margin-bottom: 30px;
+    text-align: center;
+
+    h3 {
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+
+div#contacto {
+    text-align: center;
+
+    .sucursalesinfo{
+        margin-top: 20px;
+
+        h4{
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        a {
+            justify-content: center;
+        }
+
+        #wppprov {
+            color: inherit;
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 30px;
+            padding: 5px 10px;
+
+            i {
+                color: #25d366;
+                font-size: 2rem;
+                margin-right: 0.5rem;
+            }
+
+            .texto {
+                display: block;
+            }
+
+            &:hover {
+                background-color: #25d366;
+                color: #fff;
+                i  {
+                    color: inherit;
+                }
+            }
+        }
+
+        #wppcap {
+            color: inherit;
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 30px;
+            padding: 5px 10px;
+
+            i {
+                color: #25d366;
+                font-size: 2rem;
+                margin-right: 0.5rem;
+            }
+
+            .texto {
+                display: block;
+            }
+
+            &:hover {
+                background-color: #25d366;
+                color: #fff;
+                i  {
+                    color: inherit;
+                }
+            }
+        }
+
+        #tel {
+            color: inherit;
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+            text-decoration: none;
+            border-radius: 30px;
+            padding: 5px 10px;
+
+            i {
+                color: black;
+                font-size: 2rem;
+                margin-right: 0.5rem;
+            }
+        }
+
+        .textonum {
+         padding-top: 15px;
+        }
+    }
+
+    h5.horarios {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+div#mapahome {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    border:0;
+}
+
+
+/*PAG NOSOTROS*/
+section.bannernosotros {
+   position: relative;
+
+   img{
+       position:relative;
+       width: 100%;
+       opacity: 0.8;
+
+   }
+
+   h1 {
+        position: absolute;
+        top: 150px;
+        left: 30px;
+        right: 30px;
+        font-size: 30px;
+        color: white;
+        background-color: #0000009c;
+        padding: 10px;
+    }
+}
+
+div#contenidonosotros {
+    margin: 30px;
+    text-align: center;
+
+    section#nosotrostexto {
+        text-align: center;
+    }
+}
+
+section#serviciosnosotros{
+    margin: 50px;
+    text-align: center;
+    position: relative;
+
+    img{
+        width: 100%;
+        position: relative;
+    }
+
+    button {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left:25%;
+        background-color: red;
+        font-weight: bold;
+        border: 0px;
+        box-shadow: 4px 4px 8px 0 grey;
+        padding: 20px;
+        margin: 20px;
+
+        a{
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+        }
+
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+    }
+}
+
+/*PAG CONTACTO*/
+
+#formulario{
+    h1{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #contacto button.btn.btn-primary {
+        margin-bottom: 20px;
+    }
+}
+
+section#bannersencontacto {
+    text-align: center;
+}
+
+section#servicios {
+    margin: 50px;
+    text-align: center;
+
+    button {
+        background-color: red;
+        font-weight: bold;
+        border: 0px;
+        box-shadow: 4px 4px 8px 0 grey;
+        padding: 10px;
+        margin: 20px;
+
+        a{
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+        }
+
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+
+    }
+}
+
+/* PAG SERVICIOS*/
+h1.servicios{
+    margin-top: 20px;
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+}
+
+section#servicioslista {
+
+    background-image: url(/img/background/autoneumatico.jpg);
+    color: white;
+    opacity: 0.9;
+    margin-top: 0px;
+
+
+    div#contenedordeservicios {
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        div#mecanica{
+            margin-top: 10px;
+
+            .card-header{
+                padding: 0px;
+                background-color: hsla(0, 0%, 100%, 0.555);
+                border-bottom: 0px;
+            }
+
+            .card{
+                background-color: hsla(0, 0%, 100%, 0.726);
+            }
+
+            .card-body {
+                color: black;
+            }
+
+            button.btn.btn-link.btn-block.text-left {
+                color: black;
+                text-transform: uppercase;
+            }
+        }
+
+        div#gomeria{
+
+            margin-top:10px;
+
+            ul.gomeria {
+                background-clip: border-box;
+                color: black;
+                background-color: hsla(0, 0%, 100%, 0.726);
+                border: 1px solid rgba(0,0,0,.125);
+                border-radius: .25rem;
+                height: auto;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                list-style: none;
+                text-transform: uppercase;
+                padding-inline-start: 13px;
+            }
+        }
+    }
+}
+
+section#contactoservicios {
+    text-align: center;
+
+    button#botonsacontacto {
+        background-color: red;
+        font-weight: bold;
+        border: 0px;
+        box-shadow: 4px 4px 8px 0 grey;
+        padding: 10px;
+        margin: 20px;
+
+        a{
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+        }
+
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+
+    }
+}
+
+section#bannersencontacto {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}

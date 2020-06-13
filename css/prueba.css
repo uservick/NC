@@ -1,0 +1,486 @@
+@charset "UTF-8";
+/* ESTILO GENERAL */
+* {
+  box-sizing: border-box; }
+
+html, body {
+  font-family: 'Lato', sans-serif;
+  margin: 0;
+  /* padding:15px; */
+  min-height: 100vh; }
+
+.container {
+  max-width: 1100px;
+  margin: auto; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+/*HEADER, MENU*/
+header {
+  background-color: black;
+  max-width: 100%;
+  position: sticky;
+  top: 0px;
+  z-index: 1; }
+  header .cabecera {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    margin-left: 1rem;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0; }
+    header .cabecera .nota {
+      width: 100%;
+      margin: 0; }
+      header .cabecera .nota p.nota {
+        background-color: #808080;
+        color: white;
+        padding: 5px;
+        text-align: center;
+        font-size: 1vw; }
+    header .cabecera .menu {
+      width: 100%;
+      padding: 1vw;
+      display: flex;
+      align-content: center;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      margin: 0px; }
+      header .cabecera .menu .logonc {
+        width: auto;
+        height: 39px; }
+      header .cabecera .menu nav {
+        display: flex;
+        justify-content: space-around;
+        flex-grow: 1;
+        width: 50vw; }
+        header .cabecera .menu nav a {
+          color: white;
+          margin: 1px;
+          background-color: black;
+          font-size: 14px;
+          text-transform: uppercase;
+          text-decoration: none; }
+          header .cabecera .menu nav a a:hover {
+            font-weight: bold;
+            color: white;
+            text-decoration: none; }
+
+.footer {
+  background-color: black;
+  padding: 20px; }
+  .footer p {
+    color: white;
+    text-align: center;
+    font-size: 12px; }
+
+/*BANNER PRINCIPAL PAG INDEX Y HANKOOK*/
+.main {
+  width: 100%; }
+
+.slide {
+  width: 100%; }
+  .slide img {
+    width: 100%; }
+
+/*seccion consultas yoko y hank*/
+section#consultas {
+  /* margin: 2rem; */
+  padding: 2rem;
+  background-color: black;
+  color: white;
+  text-align: center;
+  display: flex; }
+  section#consultas a {
+    color: white; }
+  section#consultas .ctauno {
+    font-size: 20px; }
+  section#consultas div#whatsappdata {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-areas: "wppcap wppprov";
+    align-items: center;
+    justify-content: center; }
+    section#consultas div#whatsappdata #wppprov {
+      color: inherit;
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      text-decoration: none;
+      border-radius: 30px;
+      padding: 5px 10px; }
+      section#consultas div#whatsappdata #wppprov i {
+        color: #25d366;
+        font-size: 2rem;
+        margin-right: 0.5rem; }
+      section#consultas div#whatsappdata #wppprov .texto {
+        display: block; }
+      section#consultas div#whatsappdata #wppprov:hover {
+        background-color: #25d366;
+        color: #fff; }
+        section#consultas div#whatsappdata #wppprov:hover i {
+          color: inherit; }
+    section#consultas div#whatsappdata #wppcap {
+      color: inherit;
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      text-decoration: none;
+      border-radius: 30px;
+      padding: 5px 10px; }
+      section#consultas div#whatsappdata #wppcap i {
+        color: #25d366;
+        font-size: 2rem;
+        margin-right: 0.5rem; }
+      section#consultas div#whatsappdata #wppcap .texto {
+        display: block; }
+      section#consultas div#whatsappdata #wppcap:hover {
+        background-color: #25d366;
+        color: #fff; }
+        section#consultas div#whatsappdata #wppcap:hover i {
+          color: inherit; }
+
+/*seccion neumaticos*/
+section#neumaticosyokohama {
+  /*background-color: gray;*/
+  padding: 2rem;
+  color: white;
+  text-align: center; }
+  section#neumaticosyokohama h1 {
+    text-align: center;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: black solid;
+    padding: 20px;
+    border-radius: 10px; }
+  section#neumaticosyokohama p {
+    text-align: center;
+    color: black;
+    padding: 0 20px 20px 20px;
+    font-size: 1rem;
+    margin-bottom: 50px; }
+
+section#neumaticosHankook {
+  /*background-color: gray;*/
+  padding: 2rem;
+  color: white;
+  text-align: center; }
+  section#neumaticosHankook h1 {
+    text-align: center;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: black solid;
+    padding: 20px;
+    border-radius: 10px; }
+  section#neumaticosHankook p {
+    text-align: center;
+    color: black;
+    padding: 0 20px 20px 20px;
+    font-size: 1rem;
+    margin-bottom: 50px; }
+
+article.modeloneumatico {
+  background-color: white;
+  color: black;
+  display: inline-block;
+  width: 340px;
+  margin: 5px;
+  text-align: center;
+  box-shadow: 4px 4px 8px 0 grey; }
+  article.modeloneumatico .logoneumatico {
+    width: 150px;
+    padding: 10px; }
+  article.modeloneumatico h2 {
+    font-size: 18px; }
+  article.modeloneumatico h3 {
+    font-size: 16px;
+    padding: 5px; }
+  article.modeloneumatico img.neumatico {
+    width: 80%; }
+    article.modeloneumatico img.neumatico:hover {
+      width: 85%; }
+
+/*Seccion hankook y yoko*/
+.llamadoawebcont {
+  text-align: center; }
+  .llamadoawebcont img.llamadoaweb {
+    margin: 10px;
+    width: 80%; }
+
+.cta {
+  background-color: #CC1B05;
+  text-align: center;
+  padding: 30px;
+  color: white;
+  /* margin: 20px; */ }
+  .cta h4 {
+    font-size: 1rem∫; }
+  .cta button {
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    font-size: 20px;
+    border: 0;
+    border-radius: 12px;
+    padding: 8px 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 350ms ease;
+    transform-origin: center center; }
+    .cta button:hover {
+      background-color: grey;
+      color: white;
+      animation-play-state: paused; }
+
+/*seccion promocional*/
+section#promocional {
+  box-shadow: 4px 4px 8px 0 grey;
+  margin: 5rem;
+  padding: 40px;
+  text-align: center;
+  /* display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr; */ }
+  section#promocional h3.titulopromo {
+    text-align: center;
+    /* grid-column-start: 1;
+        grid-column-end: 3; */
+    margin-bottom: 40px; }
+  section#promocional .cuotas12 {
+    text-align: center;
+    margin-bottom: 30px; }
+    section#promocional .cuotas12 h4 {
+      font-size: 20px;
+      font-weight: bold; }
+  section#promocional .cuotas18 h4 {
+    font-size: 20px;
+    font-weight: bold; }
+  section#promocional img.logopromo {
+    width: 20vw; }
+
+/*seccion contacto yoko y hank*/
+div.contactoCTA {
+  margin-bottom: 30px;
+  text-align: center; }
+  div.contactoCTA h3 {
+    text-transform: uppercase;
+    text-align: center; }
+
+div#contacto {
+  text-align: center; }
+  div#contacto .sucursalesinfo {
+    margin-top: 20px; }
+    div#contacto .sucursalesinfo h4 {
+      font-size: 18px;
+      font-weight: bold; }
+    div#contacto .sucursalesinfo a {
+      justify-content: center; }
+    div#contacto .sucursalesinfo #wppprov {
+      color: inherit;
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      text-decoration: none;
+      border-radius: 30px;
+      padding: 5px 10px; }
+      div#contacto .sucursalesinfo #wppprov i {
+        color: #25d366;
+        font-size: 2rem;
+        margin-right: 0.5rem; }
+      div#contacto .sucursalesinfo #wppprov .texto {
+        display: block; }
+      div#contacto .sucursalesinfo #wppprov:hover {
+        background-color: #25d366;
+        color: #fff; }
+        div#contacto .sucursalesinfo #wppprov:hover i {
+          color: inherit; }
+    div#contacto .sucursalesinfo #wppcap {
+      color: inherit;
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      text-decoration: none;
+      border-radius: 30px;
+      padding: 5px 10px; }
+      div#contacto .sucursalesinfo #wppcap i {
+        color: #25d366;
+        font-size: 2rem;
+        margin-right: 0.5rem; }
+      div#contacto .sucursalesinfo #wppcap .texto {
+        display: block; }
+      div#contacto .sucursalesinfo #wppcap:hover {
+        background-color: #25d366;
+        color: #fff; }
+        div#contacto .sucursalesinfo #wppcap:hover i {
+          color: inherit; }
+    div#contacto .sucursalesinfo #tel {
+      color: inherit;
+      display: flex;
+      align-items: center;
+      font-size: 1rem;
+      text-decoration: none;
+      border-radius: 30px;
+      padding: 5px 10px; }
+      div#contacto .sucursalesinfo #tel i {
+        color: black;
+        font-size: 2rem;
+        margin-right: 0.5rem; }
+    div#contacto .sucursalesinfo .textonum {
+      padding-top: 15px; }
+  div#contacto h5.horarios {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px; }
+
+div#mapahome {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  border: 0; }
+
+/*PAG NOSOTROS*/
+section.bannernosotros {
+  position: relative; }
+  section.bannernosotros img {
+    position: relative;
+    width: 100%;
+    opacity: 0.8; }
+  section.bannernosotros h1 {
+    position: absolute;
+    top: 150px;
+    left: 30px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    background-color: #0000009c;
+    padding: 10px; }
+
+div#contenidonosotros {
+  margin: 30px;
+  text-align: center; }
+  div#contenidonosotros section#nosotrostexto {
+    text-align: center; }
+
+section#serviciosnosotros {
+  margin: 50px;
+  text-align: center;
+  position: relative; }
+  section#serviciosnosotros img {
+    width: 100%;
+    position: relative; }
+  section#serviciosnosotros button {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 25%;
+    background-color: red;
+    font-weight: bold;
+    border: 0px;
+    box-shadow: 4px 4px 8px 0 grey;
+    padding: 20px;
+    margin: 20px; }
+    section#serviciosnosotros button a {
+      text-decoration: none;
+      color: white;
+      padding: 10px; }
+    section#serviciosnosotros button:hover {
+      background-color: black;
+      color: white; }
+
+/*PAG CONTACTO*/
+#formulario h1 {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+#formulario #contacto button.btn.btn-primary {
+  margin-bottom: 20px; }
+
+section#bannersencontacto {
+  text-align: center; }
+
+section#servicios {
+  margin: 50px;
+  text-align: center; }
+  section#servicios button {
+    background-color: red;
+    font-weight: bold;
+    border: 0px;
+    box-shadow: 4px 4px 8px 0 grey;
+    padding: 10px;
+    margin: 20px; }
+    section#servicios button a {
+      text-decoration: none;
+      color: white;
+      padding: 10px; }
+    section#servicios button:hover {
+      background-color: black;
+      color: white; }
+
+/* PAG SERVICIOS*/
+h1.servicios {
+  margin-top: 20px;
+  color: #000000;
+  padding: 20px;
+  text-align: center; }
+
+section#servicioslista {
+  background-image: url(/img/background/autoneumatico.jpg);
+  color: white;
+  opacity: 0.9;
+  margin-top: 0px; }
+  section#servicioslista div#contenedordeservicios {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+    section#servicioslista div#contenedordeservicios div#mecanica {
+      margin-top: 10px; }
+      section#servicioslista div#contenedordeservicios div#mecanica .card-header {
+        padding: 0px;
+        background-color: rgba(255, 255, 255, 0.555);
+        border-bottom: 0px; }
+      section#servicioslista div#contenedordeservicios div#mecanica .card {
+        background-color: rgba(255, 255, 255, 0.726); }
+      section#servicioslista div#contenedordeservicios div#mecanica .card-body {
+        color: black; }
+      section#servicioslista div#contenedordeservicios div#mecanica button.btn.btn-link.btn-block.text-left {
+        color: black;
+        text-transform: uppercase; }
+    section#servicioslista div#contenedordeservicios div#gomeria {
+      margin-top: 10px; }
+      section#servicioslista div#contenedordeservicios div#gomeria ul.gomeria {
+        background-clip: border-box;
+        color: black;
+        background-color: rgba(255, 255, 255, 0.726);
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: .25rem;
+        height: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        list-style: none;
+        text-transform: uppercase;
+        padding-inline-start: 13px; }
+
+section#contactoservicios {
+  text-align: center; }
+  section#contactoservicios button#botonsacontacto {
+    background-color: red;
+    font-weight: bold;
+    border: 0px;
+    box-shadow: 4px 4px 8px 0 grey;
+    padding: 10px;
+    margin: 20px; }
+    section#contactoservicios button#botonsacontacto a {
+      text-decoration: none;
+      color: white;
+      padding: 10px; }
+    section#contactoservicios button#botonsacontacto:hover {
+      background-color: black;
+      color: white; }
+
+section#bannersencontacto {
+  margin-top: 20px;
+  margin-bottom: 30px; }
