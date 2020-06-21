@@ -9,6 +9,7 @@ html, body{
 }
 
 
+
 $colors: (
     gris: #808080,
     negro:#000000,
@@ -18,6 +19,28 @@ $colors: (
     verde: #25d366,
 );
 
+@mixin seccionNeumaticos {
+    padding: 2rem;
+	color: white;
+    text-align: center;
+
+    h1{
+        text-align: center;
+        color: black;
+        background-color:rgba(255, 255, 255, 0.9);
+        border-bottom: black solid;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    p {
+        text-align: center;
+        color: black;
+        padding: 0 20px 20px 20px;
+        font-size: 1rem;
+        margin-bottom: 50px;
+    }
+}
 
 .container {
     max-width: 1100px;
@@ -60,45 +83,49 @@ header{
             }
         }
 
-        .menu {
+        nav{
             width: 100%;
             padding: 1vw;
-            display: flex;
-            align-content: center;
-            align-items: flex-end;
-            flex-wrap: wrap;
-            margin: 0px;
+            color: rgba(255, 253, 253, 0.5);
+            border-color: rgba(0,0,0,.1);
+            background-color: black!important;
 
-            .logonc{
-                width: auto;
-                height: 39px;
+            .navbar-brand {
+                .logonc{
+                    width: auto;
+                    height: 39px;
+                }
             }
 
-            nav{
-                display: flex;
-                justify-content: space-around;
-                flex-grow: 1;
-                width: 50vw;
+            button.navbar-toggler {
+                background-color: white;
+            }
 
-                a{
-                    color:white;
-                    margin: 1px;
-                    background-color: black;
-                    font-size: 14px;
-                    text-transform: uppercase;
-                    text-decoration: none;
+            #navbarSupportedContent{
+                width: 100%;
 
-                    a:hover{
-                        font-weight: bold;
-                        color:white;
-                        text-decoration: none;
+                ul{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-around;
+
+                    li.nav-item{
+                        a.nav-link {
+                            color: #f8f9fa!important;
+                            font-size: 14px;
+                            text-transform: uppercase;
+
+                            &:hover {
+                                font-weight: bold;color: #6c757d;
+                            }
+                        }
                     }
-                 }
+
+                }
             }
         }
     }
 }
-
 
 .footer{
 	background-color: black;
@@ -211,51 +238,11 @@ section#consultas {
 
 /*seccion neumaticos*/
 section#neumaticosyokohama {
-    /*background-color: gray;*/
-    padding: 2rem;
-	color: white;
-    text-align: center;
-
-    h1{
-        text-align: center;
-        color: black;
-        background-color:rgba(255, 255, 255, 0.9);
-        border-bottom: black solid;
-        padding: 20px;
-        border-radius: 10px;
-    }
-
-    p {
-        text-align: center;
-        color: black;
-        padding: 0 20px 20px 20px;
-        font-size: 1rem;
-        margin-bottom: 50px;
-    }
+    @include seccionNeumaticos
 }
 
 section#neumaticosHankook {
-    /*background-color: gray;*/
-    padding: 2rem;
-	color: white;
-    text-align: center;
-
-    h1{
-        text-align: center;
-        color: black;
-        background-color:rgba(255, 255, 255, 0.9);
-        border-bottom: black solid;
-        padding: 20px;
-        border-radius: 10px;
-    }
-
-    p {
-        text-align: center;
-        color: black;
-        padding: 0 20px 20px 20px;
-        font-size: 1rem;
-        margin-bottom: 50px;
-    }
+    @include seccionNeumaticos
 }
 
 article.modeloneumatico {
@@ -620,6 +607,9 @@ h1.servicios{
 section#servicioslista {
 
     background-image: url(/img/background/autoneumatico.jpg);
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: white;
     opacity: 0.9;
     margin-top: 0px;
