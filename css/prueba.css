@@ -11,11 +11,16 @@ html, body {
 
 .container {
   max-width: 1100px;
-  margin: auto; }
+  margin: auto;
+  padding: 0px; }
 
 a {
   text-decoration: none;
   color: black; }
+
+.btn.btn-primary {
+  background-color: red !important;
+  border-color: red; }
 
 /*HEADER, MENU*/
 header {
@@ -40,10 +45,12 @@ header {
         color: white;
         padding: 5px;
         text-align: center;
-        font-size: 1vw; }
+        font-size: 10px;
+        font-weight: bold; }
     header .cabecera nav {
       width: 100%;
-      padding: 1vw;
+      padding-left: 30px;
+      padding-right: 30px;
       color: rgba(255, 253, 253, 0.5);
       border-color: rgba(0, 0, 0, 0.1);
       background-color: black !important; }
@@ -57,7 +64,8 @@ header {
         header .cabecera nav #navbarSupportedContent ul {
           width: 100%;
           display: flex;
-          justify-content: space-around; }
+          justify-content: space-around;
+          align-items: center; }
           header .cabecera nav #navbarSupportedContent ul li.nav-item a.nav-link {
             color: #f8f9fa !important;
             font-size: 14px;
@@ -95,12 +103,18 @@ section#consultas {
     color: white; }
   section#consultas .ctauno {
     font-size: 20px; }
+    @media (max-width: 500px) {
+      section#consultas .ctauno {
+        font-size: 14px; } }
   section#consultas div#whatsappdata {
     display: grid;
     grid-gap: 50px;
     grid-template-areas: "wppcap wppprov";
     align-items: center;
     justify-content: center; }
+    @media (max-width: 500px) {
+      section#consultas div#whatsappdata {
+        grid-gap: 0; } }
     section#consultas div#whatsappdata #wppprov {
       color: inherit;
       display: flex;
@@ -109,6 +123,9 @@ section#consultas {
       text-decoration: none;
       border-radius: 30px;
       padding: 10px 20px; }
+      @media (max-width: 500px) {
+        section#consultas div#whatsappdata #wppprov {
+          font-size: 12px; } }
       section#consultas div#whatsappdata #wppprov i {
         color: #25d366;
         font-size: 2rem;
@@ -120,6 +137,9 @@ section#consultas {
         color: #fff; }
         section#consultas div#whatsappdata #wppprov:hover i {
           color: inherit; }
+      @media (max-width: 500px) {
+        section#consultas div#whatsappdata #wppprov {
+          grid-column: 1 / 4; } }
     section#consultas div#whatsappdata #wppcap {
       color: inherit;
       display: flex;
@@ -128,6 +148,9 @@ section#consultas {
       text-decoration: none;
       border-radius: 30px;
       padding: 10px 20px; }
+      @media (max-width: 500px) {
+        section#consultas div#whatsappdata #wppcap {
+          font-size: 12px; } }
       section#consultas div#whatsappdata #wppcap i {
         color: #25d366;
         font-size: 2rem;
@@ -142,10 +165,10 @@ section#consultas {
 
 /*seccion neumaticos*/
 section#neumaticosyokohama {
-  padding: 2rem;
   color: white;
   text-align: center; }
   section#neumaticosyokohama h1 {
+    margin: 2rem;
     text-align: center;
     color: black;
     background-color: rgba(255, 255, 255, 0.9);
@@ -153,6 +176,7 @@ section#neumaticosyokohama {
     padding: 20px;
     border-radius: 10px; }
   section#neumaticosyokohama p {
+    margin: 2rem;
     text-align: center;
     color: black;
     padding: 0 20px 20px 20px;
@@ -160,10 +184,10 @@ section#neumaticosyokohama {
     margin-bottom: 50px; }
 
 section#neumaticosHankook {
-  padding: 2rem;
   color: white;
   text-align: center; }
   section#neumaticosHankook h1 {
+    margin: 2rem;
     text-align: center;
     color: black;
     background-color: rgba(255, 255, 255, 0.9);
@@ -171,6 +195,7 @@ section#neumaticosHankook {
     padding: 20px;
     border-radius: 10px; }
   section#neumaticosHankook p {
+    margin: 2rem;
     text-align: center;
     color: black;
     padding: 0 20px 20px 20px;
@@ -185,6 +210,9 @@ article.modeloneumatico {
   margin: 5px;
   text-align: center;
   box-shadow: 4px 4px 8px 0 grey; }
+  @media (max-width: 500px) {
+    article.modeloneumatico {
+      margin: 5 0 5 0; } }
   article.modeloneumatico .logoneumatico {
     width: 150px;
     padding: 10px; }
@@ -240,11 +268,21 @@ section#promocional {
   /* display: grid;
     grid-gap: 10px;
     grid-template-columns: 1fr 1fr; */ }
+  @media (max-width: 500px) {
+    section#promocional {
+      margin-top: 50px;
+      margin-bottom: 50px;
+      margin-left: 25px;
+      margin-right: 25px; } }
   section#promocional h3.titulopromo {
     text-align: center;
     /* grid-column-start: 1;
         grid-column-end: 3; */
     margin-bottom: 40px; }
+    @media (max-width: 500px) {
+      section#promocional h3.titulopromo {
+        font-size: 20px;
+        font-weight: bold; } }
   section#promocional .cuotas12 {
     text-align: center;
     margin-bottom: 30px; }
@@ -258,85 +296,95 @@ section#promocional {
     width: 20vw; }
 
 /*seccion contacto yoko y hank*/
-div.contactoCTA {
-  margin-bottom: 30px;
-  text-align: center; }
-  div.contactoCTA h3 {
-    text-transform: uppercase;
+#locales {
+  margin: 20px; }
+  #locales div.contactoCTA {
+    margin-bottom: 30px;
     text-align: center; }
-
-div#contacto {
-  text-align: center; }
-  div#contacto .sucursalesinfo {
-    margin-top: 20px; }
-    div#contacto .sucursalesinfo h4 {
-      font-size: 18px;
-      font-weight: bold; }
-    div#contacto .sucursalesinfo a {
-      justify-content: center; }
-    div#contacto .sucursalesinfo #wppprov {
-      color: inherit;
-      display: flex;
-      align-items: center;
-      font-size: 1rem;
-      text-decoration: none;
-      border-radius: 30px;
-      padding: 5px 10px; }
-      div#contacto .sucursalesinfo #wppprov i {
-        color: #25d366;
-        font-size: 2rem;
-        margin-right: 0.5rem; }
-      div#contacto .sucursalesinfo #wppprov .texto {
-        display: block; }
-      div#contacto .sucursalesinfo #wppprov:hover {
-        background-color: #25d366;
-        color: #fff; }
-        div#contacto .sucursalesinfo #wppprov:hover i {
-          color: inherit; }
-    div#contacto .sucursalesinfo #wppcap {
-      color: inherit;
-      display: flex;
-      align-items: center;
-      font-size: 1rem;
-      text-decoration: none;
-      border-radius: 30px;
-      padding: 5px 10px; }
-      div#contacto .sucursalesinfo #wppcap i {
-        color: #25d366;
-        font-size: 2rem;
-        margin-right: 0.5rem; }
-      div#contacto .sucursalesinfo #wppcap .texto {
-        display: block; }
-      div#contacto .sucursalesinfo #wppcap:hover {
-        background-color: #25d366;
-        color: #fff; }
-        div#contacto .sucursalesinfo #wppcap:hover i {
-          color: inherit; }
-    div#contacto .sucursalesinfo #tel {
-      color: inherit;
-      display: flex;
-      align-items: center;
-      font-size: 1rem;
-      text-decoration: none;
-      border-radius: 30px;
-      padding: 5px 10px; }
-      div#contacto .sucursalesinfo #tel i {
-        color: black;
-        font-size: 2rem;
-        margin-right: 0.5rem; }
-    div#contacto .sucursalesinfo .textonum {
-      padding-top: 15px; }
-  div#contacto h5.horarios {
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 20px; }
-
-div#mapahome {
-  overflow: hidden;
-  width: 100%;
-  height: auto;
-  border: 0; }
+    #locales div.contactoCTA h3 {
+      text-transform: uppercase;
+      text-align: center; }
+    #locales div.contactoCTA button {
+      color: white;
+      box-shadow: 4px 4px 8px 0 grey; }
+      #locales div.contactoCTA button a {
+        text-decoration: none;
+        color: white;
+        padding: 10px; }
+      #locales div.contactoCTA button:hover {
+        background-color: black;
+        color: white; }
+  #locales div#contacto {
+    text-align: center; }
+    #locales div#contacto .sucursalesinfo {
+      margin-top: 20px; }
+      #locales div#contacto .sucursalesinfo h4 {
+        font-size: 18px;
+        font-weight: bold; }
+      #locales div#contacto .sucursalesinfo a {
+        justify-content: center; }
+      #locales div#contacto .sucursalesinfo #wppprov {
+        color: inherit;
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        text-decoration: none;
+        border-radius: 30px;
+        padding: 5px 10px; }
+        #locales div#contacto .sucursalesinfo #wppprov i {
+          color: #25d366;
+          font-size: 2rem;
+          margin-right: 0.5rem; }
+        #locales div#contacto .sucursalesinfo #wppprov .texto {
+          display: block; }
+        #locales div#contacto .sucursalesinfo #wppprov:hover {
+          background-color: #25d366;
+          color: #fff; }
+          #locales div#contacto .sucursalesinfo #wppprov:hover i {
+            color: inherit; }
+      #locales div#contacto .sucursalesinfo #wppcap {
+        color: inherit;
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        text-decoration: none;
+        border-radius: 30px;
+        padding: 5px 10px; }
+        #locales div#contacto .sucursalesinfo #wppcap i {
+          color: #25d366;
+          font-size: 2rem;
+          margin-right: 0.5rem; }
+        #locales div#contacto .sucursalesinfo #wppcap .texto {
+          display: block; }
+        #locales div#contacto .sucursalesinfo #wppcap:hover {
+          background-color: #25d366;
+          color: #fff; }
+          #locales div#contacto .sucursalesinfo #wppcap:hover i {
+            color: inherit; }
+      #locales div#contacto .sucursalesinfo #tel {
+        color: inherit;
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        text-decoration: none;
+        border-radius: 30px;
+        padding: 5px 10px; }
+        #locales div#contacto .sucursalesinfo #tel i {
+          color: black;
+          font-size: 2rem;
+          margin-right: 0.5rem; }
+      #locales div#contacto .sucursalesinfo .textonum {
+        padding-top: 15px; }
+    #locales div#contacto h5.horarios {
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 20px; }
+  #locales div#mapahome {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    border: 0; }
 
 /*PAG NOSOTROS*/
 section.bannernosotros {
@@ -356,8 +404,9 @@ section.bannernosotros {
     padding: 10px; }
 
 div#contenidonosotros {
-  margin: 30px;
-  text-align: center; }
+  margin-top: 30px;
+  text-align: center;
+  padding: 30px; }
   div#contenidonosotros section#nosotrostexto {
     text-align: center; }
 
@@ -369,6 +418,9 @@ section#serviciosnosotros {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center; }
+  @media (max-width: 500px) {
+    section#serviciosnosotros {
+      margin-top: 0; } }
   section#serviciosnosotros button {
     display: flex;
     flex-wrap: wrap;
@@ -388,17 +440,25 @@ section#serviciosnosotros {
     section#serviciosnosotros button:hover {
       background-color: black;
       color: white; }
+    @media (max-width: 500px) {
+      section#serviciosnosotros button {
+        position: relative; } }
   section#serviciosnosotros img {
     width: 100%;
     position: relative; }
+    @media (max-width: 500px) {
+      section#serviciosnosotros img {
+        display: none; } }
 
 /*PAG CONTACTO*/
-#formulario h1 {
-  margin-top: 20px;
-  margin-bottom: 20px; }
-
-#formulario #contacto button.btn.btn-primary {
-  margin-bottom: 20px; }
+#formulario div.container {
+  padding-left: 30px;
+  padding-right: 30px; }
+  #formulario div.container h1 {
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  #formulario div.container #contacto button.btn.btn-primary {
+    margin-bottom: 20px; }
 
 section#bannersencontacto {
   text-align: center; }
@@ -436,36 +496,39 @@ section#servicioslista {
   color: white;
   opacity: 0.9;
   margin-top: 0px; }
-  section#servicioslista div#contenedordeservicios {
-    padding-top: 20px;
-    padding-bottom: 20px; }
-    section#servicioslista div#contenedordeservicios div#mecanica {
-      margin-top: 10px; }
-      section#servicioslista div#contenedordeservicios div#mecanica .card-header {
-        padding: 0px;
-        background-color: rgba(255, 255, 255, 0.555);
-        border-bottom: 0px; }
-      section#servicioslista div#contenedordeservicios div#mecanica .card {
-        background-color: rgba(255, 255, 255, 0.726); }
-      section#servicioslista div#contenedordeservicios div#mecanica .card-body {
-        color: black; }
-      section#servicioslista div#contenedordeservicios div#mecanica button.btn.btn-link.btn-block.text-left {
-        color: black;
-        text-transform: uppercase; }
-    section#servicioslista div#contenedordeservicios div#gomeria {
-      margin-top: 10px; }
-      section#servicioslista div#contenedordeservicios div#gomeria ul.gomeria {
-        background-clip: border-box;
-        color: black;
-        background-color: rgba(255, 255, 255, 0.726);
-        border: 1px solid rgba(0, 0, 0, 0.125);
-        border-radius: .25rem;
-        height: auto;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        list-style: none;
-        text-transform: uppercase;
-        padding-inline-start: 13px; }
+  section#servicioslista div.container {
+    padding-right: 30px;
+    padding-left: 30px; }
+    section#servicioslista div.container div#contenedordeservicios {
+      padding-top: 20px;
+      padding-bottom: 20px; }
+      section#servicioslista div.container div#contenedordeservicios div#mecanica {
+        margin-top: 10px; }
+        section#servicioslista div.container div#contenedordeservicios div#mecanica .card-header {
+          padding: 0px;
+          background-color: rgba(255, 255, 255, 0.555);
+          border-bottom: 0px; }
+        section#servicioslista div.container div#contenedordeservicios div#mecanica .card {
+          background-color: rgba(255, 255, 255, 0.726); }
+        section#servicioslista div.container div#contenedordeservicios div#mecanica .card-body {
+          color: black; }
+        section#servicioslista div.container div#contenedordeservicios div#mecanica button.btn.btn-link.btn-block.text-left {
+          color: black;
+          text-transform: uppercase; }
+      section#servicioslista div.container div#contenedordeservicios div#gomeria {
+        margin-top: 10px; }
+        section#servicioslista div.container div#contenedordeservicios div#gomeria ul.gomeria {
+          background-clip: border-box;
+          color: black;
+          background-color: rgba(255, 255, 255, 0.726);
+          border: 1px solid rgba(0, 0, 0, 0.125);
+          border-radius: .25rem;
+          height: auto;
+          padding-top: 10px;
+          padding-bottom: 10px;
+          list-style: none;
+          text-transform: uppercase;
+          padding-inline-start: 13px; }
 
 section#contactoservicios {
   text-align: center; }
